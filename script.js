@@ -1,6 +1,23 @@
-//your JS code here. If required.
-const status = document.getElementById("status");
-const enterBtn = document.getElementById("enterBtn");
-enterBtn.addEventListener("click", () => {
-    status.outerHTML = "<h1 id='status'>Entered Metaverse</h1>";
-});
+function updateText() {
+
+  // Get the p tag with id 'status'
+
+  var statusParagraph = document.getElementById('status');
+
+  // Change the text content of the p tag
+
+  statusParagraph.textContent = "Entered Metaverse";
+
+  // Create a new h1 element
+
+  var h1Element = document.createElement('h1');
+
+  // Set its text content
+
+  h1Element.textContent = "Entered Metaverse";
+
+  // Replace the existing p tag with the new h1 tag
+
+  statusParagraph.parentNode.replaceChild(h1Element, statusParagraph);
+
+}
